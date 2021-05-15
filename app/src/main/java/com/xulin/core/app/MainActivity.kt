@@ -1,4 +1,4 @@
-package com.xulin.core
+package com.xulin.core.app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
