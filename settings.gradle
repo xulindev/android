@@ -2,3 +2,4 @@ rootProject.name = "AndroidCore"
 include ':app'
 include ':display'
 include ':extension'
+include ':recycleview'
