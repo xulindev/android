@@ -5,7 +5,7 @@
 
 Android项目核心架构封装库，主要封装基础库，便于快速开发App。
 
-# [License](https://github.com/xulindev/AndroidCore/blob/master/LICENSE)
+# [License](https://github.com/xulindev/android/blob/master/LICENSE)
 
 ```
 Copyright 2020 许林
