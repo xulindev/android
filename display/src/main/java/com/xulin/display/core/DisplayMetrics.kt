@@ -1,6 +1,8 @@
 package com.xulin.display.core
 
 import android.content.Context
+import android.os.Build
+import android.view.WindowManager
 
 /**
  * 屏幕信息辅助类 获取屏幕的高度和宽度
@@ -61,7 +63,15 @@ object DisplayMetrics {
      */
     private fun getDisplayMetrics(context: Context): android.util.DisplayMetrics {
         val metrics = android.util.DisplayMetrics()
-        context.display?.getRealMetrics(metrics)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            context.display?.getRealMetrics(metrics)
+        } else {
+            (context.getSystemService(
+                Context.WINDOW_SERVICE
+            ) as WindowManager)
+                .defaultDisplay
+                .getRealMetrics(metrics)
+        }
         return metrics
     }
 }
